@@ -20,51 +20,26 @@
     {
       "FirstName": "samson",
       "LastName": "kamau",
-      "Email": "samson@gmail.com",
-      "DoB": "2023-05-19T21:00:00.000Z",
+      "Email": "samcy@gmail.com",
+      "DoB": "2023-06-06T21:00:00.000Z",
       "Gender": "male",
-      "Education": "Under-Graduate",
-      "Company": "dive",
-      "Experience": "5",
-      "Package": "5",
-      "id": 1
+      "Education": "Post-Graduate",
+      "Company": "eclectics",
+      "Experience": "4",
+      "Package": "363",
+      "id": 7
     },
     {
-      "FirstName": "John",
-      "LastName": "dave",
-      "Email": "dave@gmail.com",
-      "DoB": "2023-05-04T21:00:00.000Z",
-      "Gender": "male",
-      "Education": "Diploma",
-      "Company": "google",
-      "Experience": "5",
-      "Package": "4",
-      "id": 2
-    },
-    {
-      "FirstName": "vannesa",
-      "LastName": "Wambui",
-      "Email": "vany@gmail.com",
-      "DoB": "2023-05-17T21:00:00.000Z",
+      "FirstName": "Risper",
+      "LastName": "Wanja",
+      "Email": "risper@gmail.com",
+      "DoB": "2023-06-06T21:00:00.000Z",
       "Gender": "female",
       "Education": "Under-Graduate",
       "Company": "Eclectics",
-      "Experience": "7",
-      "Package": "37",
-      "id": 3
-    },
-
-    {
-      "FirstName": "alex",
-      "LastName": "mugambi",
-      "Email": "alex@gmail.com",
-      "DoB": "2023-05-10T21:00:00.000Z",
-      "Gender": "male",
-      "Education": "Under-Graduate",
-      "Company": "google",
-      "Experience": "2",
-      "Package": "258",
-      "id": 6
+      "Experience": "3",
+      "Package": "100",
+      "id": 8
     }
   ]
 }

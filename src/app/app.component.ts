@@ -13,7 +13,7 @@ import {MatTableDataSource} from '@angular/material/table'
 })
 export class AppComponent  implements OnInit{
   title = 'admission-app';
-  displayedColumns: string[] = ['id', 'FirstName', 'LastName', 'Email','DoB','Gender','Education','Company','Experience','Package',];
+  displayedColumns: string[] = ['id', 'FirstName', 'LastName', 'Email','DoB','Gender','Education','Company','Experience','Package','action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -24,8 +24,18 @@ export class AppComponent  implements OnInit{
     this.getEmployeeList();
   }
   openAddEditEmpForm(){
-    this._dialog.open(EmpAddEditComponent);
+    const dialogRef=this._dialog.open(EmpAddEditComponent);
+    dialogRef.afterClosed().subscribe({
+      next:(val)=>{
+        if(val){
+         this.getEmployeeList(); 
+        }
+      }
+    })
   }
+
+
+
   getEmployeeList(){
     this._empService.getEmployeeList().subscribe({
       next: (res)=>{
@@ -46,4 +56,19 @@ export class AppComponent  implements OnInit{
       this.dataSource.paginator.firstPage();
     }
   }
+ deleteEmployee(id: number) {
+  this._empService.deleteEmployee(id).subscribe({
+    next:(res)=>{
+      alert('Employee Deleted');
+      this.getEmployeeList();
+    },
+    error:console.log,
+  });
+ }
+ openEditForm(data:any){
+  this._dialog.open(EmpAddEditComponent,{
+    data,
+  });
+ 
+}
 }
